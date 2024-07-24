@@ -75,4 +75,14 @@ def getIndex(col):
     # Query the database to return the documents where each term occurs with their corresponding count. Output example:
     # {'baseball':'Exercise:1','summer':'Exercise:1,California:1,Arizona:1','months':'Exercise:1,Discovery:3'}
     # ...
-    # --> add your Python code here
+    index = {}
+    docs = col.find()
+
+    for doc in docs:
+        for term_obj in doc["terms"]:
+            term = term_obj["terms"]
+            count = term_obj["count"]
+            if term in index:
+                index[term].append(f"{doc['title']}:{count}")
+                
+    return index
