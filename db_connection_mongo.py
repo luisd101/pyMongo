@@ -15,7 +15,18 @@
 def connectDataBase():
 
     # Create a database connection object using pymongo
-    # --> add your Python code here
+    DB_NAME = "CPP"
+    DB_HOST = "localhost"
+    DB_PORT = 27017
+
+    try:
+        client = MongoClient(host=DB_HOST, port=DB_PORT)
+        db = client[DB_NAME]
+
+        return db
+
+    except:
+        print("Error, database not connected")
 
 def createDocument(col, docId, docText, docTitle, docDate, docCat):
 
@@ -54,10 +65,10 @@ def deleteDocument(col, docId):
 def updateDocument(col, docId, docText, docTitle, docDate, docCat):
 
     # Delete the document
-    # --> add your Python code here
+    deleteDocument(col, docId)
 
     # Create the document with the same id
-    # --> add your Python code here
+    createDocument(col, docId, docText, docTitle, docDate, docCat)
 
 def getIndex(col):
 
