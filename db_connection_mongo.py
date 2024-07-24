@@ -1,9 +1,9 @@
 #-------------------------------------------------------------------------
-# AUTHOR: your name
-# FILENAME: title of the source file
-# SPECIFICATION: description of the program
-# FOR: CS 4250- Assignment #2
-# TIME SPENT: how long it took you to complete the assignment
+# AUTHOR: Luis Dominguez
+# FILENAME: db.connection_mongo.py
+# SPECIFICATION: Program using mongodb to manipulate a database of documents
+# FOR: CS 4250 - Assignment #2
+# TIME SPENT: 2 hours
 #-----------------------------------------------------------*/
 
 #IMPORTANT NOTE: DO NOT USE ANY ADVANCED PYTHON LIBRARY TO COMPLETE THIS CODE SUCH AS numpy OR pandas. You have to work here only with
