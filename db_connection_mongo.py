@@ -49,7 +49,7 @@ def createDocument(col, docId, docText, docTitle, docDate, docCat):
 def deleteDocument(col, docId):
 
     # Delete the document from the database
-    # --> add your Python code here
+    col.delete_one(col, docId)
 
 def updateDocument(col, docId, docText, docTitle, docDate, docCat):
 
