@@ -10,7 +10,7 @@
 # standard arrays
 
 #importing some Python libraries
-# --> add your Python code here
+from pymongo import MongoClient
 
 def connectDataBase():
 
